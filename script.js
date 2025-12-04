@@ -39,37 +39,37 @@ const data = [
     nome: "Abraão Santos",
     github: "https://github.com/abraaosantosdeveloper/",
     linkedin: "https://linkedin.com/in/abraaosantosdev/",
-    url_img: "/abraao.jpg"
+    url_img: "abraao.jpg"
   },
   {
     nome: "Dilvanir Aline",
     github: "https://github.com/line-byte",
     linkedin: "https://www.linkedin.com/in/dilvanir-aline-alves-cabral-de-melo-393999380/",
-    url_img: "/Aline.jpg"
+    url_img: "Aline.jpg"
   },
   {
     nome: "Emanoel Alesandro",
     github: "https://github.com/Emanoel0106",
     linkedin: "https://linkedin.com/in/abraaosantosdev/",
-    url_img: "/emanoel.jpg"
+    url_img: "emanoel.jpg"
   },
   {
     nome: "Márcio Aureliano",
     github: "https://github.com/maps-droid",
     linkedin: "https://www.linkedin.com/in/marcio-brarranco-68965312b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    url_img: "/marcio.jpg"
+    url_img: "marcio.jpg"
   },
   {
     nome: "Maria Larysse",
     github: " https://github.com/mlylp",
     linkedin: "https://www.linkedin.com/in/maria-larysse-lira-8b1a462b3/",
-    url_img: "/larysse.jpg"
+    url_img: "larysse.jpg"
   },
   {
     nome: "Pedro Pessôa",
     github: "https://github.com/Ppan-droid",
     linkedin: "https://www.linkedin.com/in/pedro-pess%C3%B4a-2a4b95364?trk=contact-info",
-    url_img: "/pedro.jpg"
+    url_img: "pedro.jpg"
   }
 ];
 
