@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oasis</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">Oasis</div>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#autores">Equipe</a></li>
+          <li><a href="#tecnico">Técnico</a></li>
+          <li><a href="#passo-a-passo">Montagem</a></li>
+          <li><a href="#codigo">Código</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="container">
+        <h1>Oasis</h1>
+        <h2>Sistema de monitoração de planta</h2>
+        <a href="#sobre" class="btn">Conhecer o Projeto</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="sobre" class="section">
+        <div class="container">
+          <h3 class="section-title">O Projeto</h3>
+
+          <div class="grid-2">
+            <div class="card">
+              <h4>Motivação e Objetivo</h4>
+              <p>
+                <strong>Motivação:</strong> Como a falta de dados ambientais
+                afeta o cultivo de plantas.
+              </p>
+              <p>
+                <strong>Objetivo:</strong> Monitorar umidade, temperatura e
+                luminosidade para garantir condições ideais.
+              </p>
+              <p>
+                <strong>Contextualização:</strong> Uso de IoT/Automação
+                Agrícola.
+              </p>
+            </div>
+            <div class="card">
+              <h4>Esquema Conceitual</h4>
+              <img
+                src="esquema_Arduino_oasis.jpg"
+                alt="Esquema do circuito do Monitor de Plantas"
+              />
+            </div>
+          </div>
+
+          <div class="keywords">
+            <span>Automação</span>
+            <span>Monitoramento Ambiental</span>
+            <span>Arduino</span>
+            <span>Jardinagem</span>
+            <span>Eletrônica</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="autores" class="section bg-alt">
+        <div class="container">
+          <h3 class="section-title">Autores</h3>
+          <div class="autores-lista" id="autores-lista"></div>
+        </div>
+      </section>
+
+      <section id="tecnico" class="section">
+        <div class="container">
+          <h3 class="section-title">Especificações Técnicas</h3>
+
+          <div class="grid-2">
+            <div>
+              <h4>Hardware & Componentes</h4>
+              <ul class="tech-list">
+                <li><strong>01 Sensor de umidade DHT</strong></li>
+                <li><strong>01 Sensor de luminosidade LDR</strong></li>
+                <li><strong>02 Leds</strong></li>
+                <li><strong>01 Placa Black Board Uno R3</strong></li>
+                <li></li>
+                <li><strong>01 Buzzer</strong></li>
+                <li><strong>01 Resistor de 1.000 ohms</strong></li>
+                <li><strong>01 Potenciômetro de 10.000 ohms</strong></li>
+                <li><strong>01 Resistor de 220 ohms</strong></li>
+                <li><strong>01 LCD Display</strong></li>
+                <li><strong>23 Jumps</strong></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Softwares & Plataformas</h4>
+              <ul class="tech-list">
+                <li><strong>IDE:</strong> Arduino IDE / VS Code</li>
+                <li><strong>Linguagens:</strong> C++ (Arduino)</li>
+                <li>
+                  <strong>libraries do IDE:</strong>DHT .h e liquid crystal .h
+                </li>
+                <li><strong>Banco de Dados:</strong> MySQL ou PostgreSQL</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="passo-a-passo" class="section bg-alt">
+        <div class="container">
+          <h3 class="section-title">Montagem e Funcionamento</h3>
+
+          <div class="step">
+            <h4>1. Conexão do LCD (pinos: 7, 6, 5, 4, 3, 2)</h4>
+            <p>
+              primeiro, o lcd deve ser conectado aos pinos 7,6,5,4,3,2 usando
+              jumpers fêmeas/machos bem como os 2 pinos de alimentação e terra,
+              e deve-se também conectar um potenciometro ligado a entrada 3 do
+              lcd
+            </p>
+            <img src="lcd.png" alt="conexão do LCD" />
+          </div>
+
+          <div class="step">
+            <h4>2. Conexão do DHT11 (pino 13)</h4>
+            <p>
+              o sensor DHT deve-se ser conectado ao pino 13 com alimentação e
+              terra, com jumpers do mesmo tipo q o lcd
+            </p>
+            <img src="dht.png" alt="conexão do DHT11" />
+          </div>
+
+          <div class="step">
+            <h4>3.conexão do LDR (pino 0)</h4>
+            <p>
+              o pino o deve ser conectado ao analog 0 e o terra, com um resistor
+              de 1000 omhs e posicionado na parte exterior do dispositivo devido
+              a sua função de captar a luz
+            </p>
+            <p>
+              recomenda-se que os sensores devem ser fixados de alguma maneira
+              (EX: fita adesiva)
+            </p>
+            <img src="ldr.png" alt="conexão LDR" />
+          </div>
+
+          <div class="step">
+            <h4>4. conexão do buzzer (pino 9)</h4>
+            <p>
+              o buzzer deve estar conectado ao pino 9 com um resistor de 220 a
+              fim de deixar o audio mais alto
+            </p>
+            <img src="buzzer.png" alt="conexão do BUZZER" />
+          </div>
+
+          <div class="step">
+            <h4>5. conexão dos leds (pino 11)</h4>
+            <p>
+              os leds devem se conectar ao pino 11 e GND usando jumperes para
+              extender o alcance dos fios
+            </p>
+            <img src="led.png" alt="conexão dos LEDS" />
+          </div>
+
+          <div class="video-container">
+            <h4>Demonstração do Projeto</h4>
+            <div class="video-wrapper">
+              <iframe
+                width="560"
+                height="315"
+                src="https://youtube.com/shorts/B2i0bXPSyc0?si=cztAEiGaHjKyxcG2"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="codigo" class="section">
+        <div class="container">
+          <h3 class="section-title">Código Fonte</h3>
+          <p>
+            Abaixo, um trecho essencial da lógica de leitura dos sensores no
+            Arduino:
+          </p>
+
+          <div class="shell-mac">
+            <div class="close"></div>
+            <div class="minimize"></div>
+            <div class="maximize"></div>
+          </div>
+          <div class="code-block">
+            <pre><code>
+// Exemplo simplificado da lógica do Arduino
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_MLX90614.h&gt;
+
+<h4>Trecho de Código: Lógica de Alerta (Função loop)</h4>
+<p>O trecho abaixo mostra a lógica principal de leitura e verificação de limites ambientais, acionando o LCD e o Buzzer quando necessário.</p>
+
+<div class="code-block">
+<pre><code>
+// Inclui a biblioteca para o sensor de Umidade e Temperatura DHT
+#include <DHT.h>
+// Inclui a biblioteca para controlar o display LCD
+#include <LiquidCrystal.h>
+
+// Define o pino digital onde o sensor DHT está conectado (pino 13)
+#define DHTPIN 13
+
+// Define o tipo de sensor DHT que está sendo usado (DHT11 neste caso)
+#define DHTTYPE DHT11
+
+// Cria um objeto 'dht' para interagir com o sensor, usando o pino e o tipo definidos
+DHT dht(DHTPIN, DHTTYPE);
+// Define o pino analógico onde o LDR (sensor de luz) está conectado (A0)
+int ldr = A0;
+// Variável para armazenar o valor lido do sensor LDR
+int valorldr = 0;
+
+// Cria um objeto 'lcd_1' para controlar o display LCD. 
+// Os números são os pinos do Arduino conectados ao LCD (RS, Enable, D4, D5, D6, D7)
+LiquidCrystal lcd_1(7,6,5,4,3,2);
+
+// Variáveis booleanas (verdadeiro/falso) para sinalizar se a temperatura, umidade ou luz está acima/abaixo dos limites
+bool templus = false; // Indica se a Temperatura está alta
+bool temminus = false; // Indica se a Temperatura está baixa
+bool humiplus = false; // Indica se a Umidade está alta
+bool humiminus = false; // Indica se a Umidade está baixa
+bool luzplus = false; // Indica se a Luz está alta/ambiente claro (valor do LDR baixo)
+bool luzminus = false; // Indica se a Luz está baixa/ambiente escuro (valor do LDR alto)
+
+// Define o pino digital para o buzzer (saída de som)
+const int buzzerPin =9;
+// Define a frequência da nota (Lá = 440 Hz)
+const int NOTA_LA = 440;
+// Define o pino digital para o LED
+int led = 11;
+
+// ---
+
+void setup() {
+  
+   // Inicia a comunicação com o sensor DHT
+  dht.begin(); 
+  // Inicializa a comunicação serial a 9600 bits por segundo (para enviar dados ao computador)
+  Serial.begin(9600); 
+    // Inicializa o display LCD, definindo que ele tem 16 colunas e 2 linhas
+  lcd_1.begin(16, 2);
+
+  // Envia uma mensagem inicial para o monitor serial
+  Serial.println("sensor iniciando");
+  // Define o pino do LDR como entrada (para ler o valor do sensor)
+  pinMode(ldr,INPUT);
+
+ 
+// Define o pino do buzzer como saída (para emitir som)
+pinMode(buzzerPin,OUTPUT);
+// Define o pino do LED como saída (para acender/apagar)
+pinMode(led, OUTPUT);
+}
+void loop() {
+
+  // Pausa por 2 segundos (2000 milissegundos) antes de fazer uma nova leitura
+  delay(2000);
+
+  // Lê o valor analógico do sensor LDR (vai de 0 a 1023)
+  valorldr=analogRead(ldr);
+
+  // Lê a umidade do sensor DHT
+  float h = dht.readHumidity();
+
+  // Lê a temperatura do sensor DHT
+  float t = dht.readTemperature();
+
+  // Verifica se a leitura do sensor DHT falhou (se houver erro ou valor inválido)
+  if (isnan(h) || isnan(t)) {
+    // Se falhar, imprime uma mensagem de erro no monitor serial e sai do loop (retorna)
+    Serial.println("Falha ao ler do sensor DHT!");
+    return;
+  }
+
+  // --- Imprime os valores no monitor Serial ---
+  Serial.print("Umidade: ");
+  Serial.print(h);
+  Serial.print("%\t");
+  Serial.print("Temperatura: ");
+  Serial.print(t);
+  Serial.println("°C");
+  Serial.print("luminosidade: ");
+  Serial.println(valorldr);
+  // ---------------------------------------------
+  
+  // --- Bloco de Verificação de Limites e Sinalização ---
+
+  // Verifica se a umidade está acima de 70%
+  if (h>70){ 
+    humiplus = true; // Se sim, ativa a flag de umidade alta
+  }
+  // Verifica se a umidade está abaixo de 40%
+  if (h<40){
+    humiminus = true; // Se sim, ativa a flag de umidade baixa
+  }
+  // Verifica se a temperatura está acima de 30°C
+  if (t>30){
+    templus = true; // Se sim, ativa a flag de temperatura alta
+  }
+  // Verifica se a temperatura está abaixo de 18°C
+  if (t<18){
+    temminus = true; // Se sim, ativa a flag de temperatura baixa
+  }
+  // Verifica se a luminosidade (LDR) está acima de 700 (geralmente indica ESCURO)
+  if (valorldr>700){
+    luzminus = true; // Se sim, ativa a flag de luz baixa/escuro
+  }
+  // Verifica se a luminosidade (LDR) está abaixo de 90 (geralmente indica CLARO)
+  if (valorldr<90){
+    luzplus = true; // Se sim, ativa a flag de luz alta/claro
+  }
+
+  // --- Bloco de Ações (LCD e Buzzer) Baseado nas Flags ---
+
+  // Se a umidade estiver alta
+  if (humiplus == true){
+    lcd_1.print("umido!!"); // Imprime "umido!!" no LCD
+    tone(buzzerPin, 440, 1000); // Toca o buzzer na frequência 440 Hz por 1 segundo
+  }
+
+  // Se a umidade estiver baixa
+  if (humiminus == true){
+    lcd_1.print("seco!!"); // Imprime "seco!!" no LCD
+    tone(buzzerPin, 440, 1000); // Toca o buzzer
+  }
+
+  // Se a temperatura estiver alta
+  if (templus == true){ 
+    lcd_1.print("quente!!"); // Imprime "quente!!" no LCD
+    tone(buzzerPin, 440, 1000); // Toca o buzzer
+  }
+
+  // Se a temperatura estiver baixa
+  if (temminus == true){
+    lcd_1.print("frio!!"); // Imprime "frio!!" no LCD
+    tone(buzzerPin, 440, 1000); // Toca o buzzer
+  }
+
+  // Se a luz estiver alta/claro
+  if (luzplus == true){
+    lcd_1.setCursor(0,1); // Move o cursor para o início da segunda linha (coluna 0, linha 1)
+    lcd_1.print("claro!!"); // Imprime "claro!!"
+    tone(buzzerPin, 440, 1000); // Toca o buzzer
+  }
+    
+  // Se a luz estiver baixa/escuro
+  if (luzminus == true){
+    lcd_1.setCursor(0,1); // Move o cursor para o início da segunda linha
+    lcd_1.print("escuro!!"); // Imprime "escuro!!"
+    tone(buzzerPin, 440, 1000); // Toca o buzzer
+  }
+  
+  // Se nenhuma das condições acima for verdadeira (tudo está dentro dos limites)
+  if(templus == false && temminus == false && humiplus == false && humiminus == false && luzplus == false && luzminus == false){
+    lcd_1.print("tudo otimo :)"); // Imprime "tudo otimo :)" no LCD
+  } 
+  
+  // --- Piscando o LED ---
+  digitalWrite(led, HIGH);  // Acende o LED (coloca a tensão em nível ALTO)
+  delay(1000);              // Espera 1 segundo (LED aceso) 
+  digitalWrite(led, LOW);   // Apaga o LED (coloca a tensão em nível BAIXO)
+  delay(1000);              // Espera 1 segundo (LED apagado)
+  // -----------------------
+
+  // Limpa todo o conteúdo do display LCD antes da próxima repetição do loop
+  lcd_1.clear();
+
+}
+
+</code></pre>
+          </div>
+
+          <div class="buttons-row">
+            <a href="LINK_DO_SEU_GITHUB" target="_blank" class="btn btn-outline"
+              >Ver Repositório no GitHub</a
+            >
+            <a href="caminho/para/seu_projeto.zip" download class="btn"
+              >Baixar Projeto Completo (.zip)</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="licoes" class="section bg-alt">
+        <div class="container">
+          <h3 class="section-title">Reflexões Finais</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>Desafios Enfrentados</h4>
+              <p>
+                <strong>Problema:</strong> Dificuldade em instalar e configurar
+                o display LCD
+              </p>
+              <p>
+                <strong>Solução:</strong> Pedimos ajuda a uma pessoa mais
+                experiente que nos mostrou como usar um template e código do
+                tinkercad para montar e testar o dispositivo.
+              </p>
+            </div>
+            <div class="card">
+              <h4>Lições Aprendidas</h4>
+              <ul>
+                <li>
+                  A importância de buscar ajuda e aprender com outras pessoas
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 - Oasis.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
