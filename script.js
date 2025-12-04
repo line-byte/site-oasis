@@ -23,7 +23,7 @@ function author_card(nome, link_github, link_linkedin, url) {
   return `
     <div class="authors-grid">
         <div class="author-card">
-            <div class="avatar" style="background-image: url('/${url}');"></div>
+            <div class="avatar" style="background-image: url('${url}');"></div>
             <h4>${nome}</h4>
             <div class="links">
                 <a href="${link_github}" target="_blank">GitHub</a> | 
@@ -45,7 +45,7 @@ const data = [
     nome: "Dilvanir Aline",
     github: "https://github.com/line-byte",
     linkedin: "https://www.linkedin.com/in/dilvanir-aline-alves-cabral-de-melo-393999380/",
-    url_img: "Aline.jpg"
+    url_img: "/Aline.jpg"
   },
   {
     nome: "Emanoel Alesandro",
